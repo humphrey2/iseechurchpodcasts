@@ -18,7 +18,7 @@ disqusShortname = "arresteddevops"
 # The theme supports menus with up to one submenu per menu item
 # The menu name must be "Main"
 # The menus are sorted based upon their identifier
-#[[Menu.Main]]
+[[Menu.Main]]
 #    name = "About"
 #    identifier = "about"
 #    url = "about"
@@ -79,44 +79,44 @@ description = "The HugoCast is the best podcast you've ever seen. You will learn
     itunes_second_sub_category = "Tech News"
 
   [params.social]
-    github = "arresteddevops"
-    gitlab = "mattstratton"
-    facebook = "Arresteddevops"
-    facebook_admin = "500557137"  # This needs to be a page admin to get domain insights
-    twitter = "arresteddevops"
-    twitter_domain = "arresteddevops.com" # This domain shows in twitter cards as "View on `twitter_domain`"
-    googleplus = "ArrestedDevOps"
-    pinterest = "nozzleio"
-    instagram = "nozzleio"
-    youtube = "arresteddevops"
-    linkedin = "mattstratton"
+#    github = "arresteddevops"
+#    gitlab = "mattstratton"
+#    facebook = "Arresteddevops"
+#    facebook_admin = "500557137"  # This needs to be a page admin to get domain insights
+#    twitter = "arresteddevops"
+#    twitter_domain = "arresteddevops.com" # This domain shows in twitter cards as "View on `twitter_domain`"
+#    googleplus = "ArrestedDevOps"
+#    pinterest = "nozzleio"
+#    instagram = "nozzleio"
+#    youtube = "arresteddevops"
+#    linkedin = "mattstratton"
 
   [params.authors]
-    [params.authors.Matt]
-      name	= "Matt Stratton"
-      thumbnail = "img/host/matt.png"
-      bio = "Matt Stratton is a solutions architect at Chef, where he demonstrates how Chef’s automation platform provides speed and flexibility to clients’ infrastructure. He is devoted to concepts like Continuous Delivery and Infrastructure as Code, and his license plate actually says “DevOps”. He lives in Chicago and has an unhealthy obsession with Doctor Who, Firefly, and Game of Thrones. And whiskey."
-      [params.authors.Matt.social]
-        github = "mattstratton"
-        facebook = "matt.stratton"
-        twitter = "mattstratton"
-        linkedin = "mattstratton"
-        homepage = "https://www.mattstratton.io"
-        pinterest = "mattstratton"
-        instagram = "instagram"
-        youtube = "mattstratton"
-    [params.authors.Trevor]
-			name = "Trevor Hess"
-			thumbnail = "https://www.arresteddevops.com/img/trevor.png"
-			bio = ""
-				[params.authors.Trevor.social]
-					twitter = "trevorghess"
-    [params.authors.Bridget]
-      name = "Bridget Kromhout"
-      thumbnail = "https://www.arresteddevops.com/img/Bridget.png"
-      bio = ""
-      [params.authors.Bridget.social]
-        twitter = "bridgetkromhout"
+  #  [params.authors.Matt]
+  #    name	= "Matt Stratton"
+  #    thumbnail = "img/host/matt.png"
+  #    bio = "Matt Stratton is a solutions architect at Chef, where he demonstrates how Chef’s automation platform provides speed and flexibility to clients’ infrastructure. He is devoted to concepts like Continuous Delivery and Infrastructure as Code, and his license plate actually says “DevOps”. He lives in Chicago and has an unhealthy obsession with Doctor Who, Firefly, and Game of Thrones. And whiskey."
+  #    [params.authors.Matt.social]
+  #      github = "mattstratton"
+  #      facebook = "matt.stratton"
+  #      twitter = "mattstratton"
+  #      linkedin = "mattstratton"
+  #      homepage = "https://www.mattstratton.io"
+  #      pinterest = "mattstratton"
+  #      instagram = "instagram"
+  #      youtube = "mattstratton"
+  #  [params.authors.Trevor]
+	#		name = "Trevor Hess"
+#			thumbnail = "https://www.arresteddevops.com/img/trevor.png"
+#			bio = ""
+#				[params.authors.Trevor.social]
+#					twitter = "trevorghess"
+ #   [params.authors.Bridget]
+ #     name = "Bridget Kromhout"
+ #     thumbnail = "https://www.arresteddevops.com/img/Bridget.png"
+ #     bio = ""
+ #     [params.authors.Bridget.social]
+ #       twitter = "bridgetkromhout"
 
     [params.links]
       [params.links.ado]

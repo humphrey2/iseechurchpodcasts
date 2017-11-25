@@ -27,6 +27,13 @@
         </li>
       {{ end }}
     {{ end }}
+    
+    {{ range $key, $taxonomy := .Site.Taxonomies.Campuses }}
+      <li class= "nav-item">
+        <a class="nav-link" href="{{ "/" | relLangURL}}campuses/{{ $key }}/">{{ $key }}</a>
+      </li>
+    {{ end }}
+
   </ul>
 
 
