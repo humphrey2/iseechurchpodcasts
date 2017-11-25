@@ -1,6 +1,6 @@
 baseurl = "http://sample-castanet.netlify.com/"
 languageCode = "en-us"
-title = "iSee Church Podcasts"
+title = "Test Podcast site"
 theme = "castanet"
 googleAnalytics = "UA-100789009-1"
 disqusShortname = "arresteddevops"
