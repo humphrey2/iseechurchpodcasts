@@ -1,5 +1,7 @@
 ---
-title: Back to School
+title: Back to School 2
+date: 2017-11-25T09:05:22.104Z
+author: Person
 Description: >-
   Bootstrapping alpha seed money scrum project. Business model canvas low
   hanging fruit series A financing release vesting period research & development
@@ -15,6 +17,6 @@ Description: >-
   hacking business plan channels incubator technology learning curve strategy.
   Disruptive sales founders paradigm shift stock growth hacking graphical user
   interface customer iPhone channels funding.
-undefined: Humphrey Bogart
+undefined: /media/20171101_195116.jpg
 ---
 
