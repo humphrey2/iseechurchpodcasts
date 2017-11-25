@@ -1,10 +1,10 @@
-baseurl = "http://sample-castanet.netlify.com/mysite/"
+baseurl = "http://sample-castanet.netlify.com/"
 languageCode = "en-us"
-title = "HugoCast"
+title = "iSee Church Podcasts"
 theme = "castanet"
 googleAnalytics = "UA-100789009-1"
 disqusShortname = "arresteddevops"
-themesdir = "../.."
+# themesdir = "../.."
 
 
 [permalinks]
@@ -12,40 +12,42 @@ themesdir = "../.."
 	about = "/:filename/"
 	episode = "/:filename/"
 
+[taxonomies]
+  Campus = "Campuses"
 
 # The theme supports menus with up to one submenu per menu item
 # The menu name must be "Main"
 # The menus are sorted based upon their identifier
-[[Menu.Main]]
-    name = "About"
-    identifier = "about"
-    url = "about"
+#[[Menu.Main]]
+#    name = "About"
+#    identifier = "about"
+#    url = "about"
 
-[[Menu.Main]]
-    name = "Contact"
-    identifier = "contact"
-    url = "contact"
+#[[Menu.Main]]
+#    name = "Contact"
+#    identifier = "contact"
+#    url = "contact"
 
-[[Menu.Main]]
-    name = "Guests"
-    identifier = "guests"
-    url = "guest"
+#[[Menu.Main]]
+#    name = "Guests"
+#    identifier = "guests"
+#    url = "guest"
 
-[[Menu.Main]]
-    name = "Resources"
-    identifier = "resources"
-    url = "#!"
+#[[Menu.Main]]
+#    name = "Resources"
+#    identifier = "resources"
+#    url = "#!"
 
-[[Menu.Main]]
-    name = "Books"
-    identifier = "books"
-    url = "books"
-    parent = "resources"
-[[Menu.Main]]
-    name = "Podcasts"
-    identifier = "podcasts"
-    url = "books"
-    parent = "resources"
+#[[Menu.Main]]
+#    name = "Books"
+#    identifier = "books"
+#    url = "books"
+#    parent = "resources"
+#[[Menu.Main]]
+#    name = "Podcasts"
+#    identifier = "podcasts"
+#    url = "books"
+#    parent = "resources"
 
 [params]
 site_theme = "blue"
@@ -63,7 +65,7 @@ pocketcasts_subscribe = "http://pcasts.in/feed/feeds.soundcloud.com/users/soundc
 mailchimp_subscribe = "//arresteddevops.us3.list-manage.com/subscribe/post?u=5e4cbcac996bb9df25f970a89&amp;id=154fa76bcc"
 #rss_subscribe = "http://feed.com/myfeed" #only set this if you don't want to use the built-in feed
 description = "The HugoCast is the best podcast you've ever seen. You will learn everything you ever needed to know about [podcasting](https://en.wikipedia.org/wiki/Podcast) from the most inspiring experts to ever show up on the whole internet."
-media_prefix = "https://media.blubrry.com/arresteddevops/content.blubrry.com/arresteddevops/"
+# media_prefix = "https://media.blubrry.com/arresteddevops/content.blubrry.com/arresteddevops/"
   [params.feed]
     feed_copyright = "Copyright 2016 Matt Stratton" #do not use markdown in this field; it is used in the feed
     itunes_subtitle = "The best podcast ever" #no markdown or HTML

@@ -1,0 +1,75 @@
+{{ define "main" }}
+
+<div class="row">
+  <div class="col-md-12">
+    <h1>{{ title .Title }}</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+        <section id="menu">
+            <ul>
+                {{ range $key, $taxonomy := .Site.Taxonomies.campuses }}
+                <li> {{ $key }} </li>
+                <ul>
+                    {{ range $taxonomy.Pages }}
+                    <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </ul>
+            <div>
+                {{ range $page := .Pages }}
+                
+                    <div class="row">
+                        <div class="col">
+                            <h1><a href="{{ $page.URL }}">{{ title .Title }}</a></h1></h1>
+                            <small>Posted on {{ dateFormat "Monday, Jan 2, 2006" .Date }}</small>
+                        </div>
+                    </div>
+                    
+                      {{ if isset .Params "episode_banner" }}
+                        {{ if ne .Params.episode_banner "" }}
+                          <div class = "row">
+                          <div class = "col">
+                            <img src="{{ .Params.episode_banner | absURL }}" class="img-fluid episode_image"/>
+                          </div>
+                          </div>
+                          <div class = "row">
+                          <div class = "col">
+                            {{ .Description | markdownify }}
+                          </div>
+                          </div>
+                        {{ end }}
+                      {{ else }}
+                        <!-- begin square row -->
+                        {{- if isset .Params "episode_image" -}}
+                          {{- if ne .Params.episode_image "" -}}
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="{{ .Params.episode_image | absURL }}" class="img-fluid episode_image"/>
+                              </div>
+                              <div class="col-md-8">
+                                {{ .Description | markdownify }}
+                              </div>
+                            </div>
+                          {{- end -}}
+                        {{- else -}}
+                          <div class="row">
+                            <div class="col">
+                              {{ .Description | markdownify }}
+                            </div>
+                          </div>
+                        {{- end -}}
+                    
+                        <!-- end square row -->
+                      {{ end }}
+                    <hr/>
+                {{ end }}
+            </div>
+        </section>
+  </div>
+</div>
+
+{{ end }}
