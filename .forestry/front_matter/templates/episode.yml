@@ -8,20 +8,18 @@ fields:
   description: Short and sweet is best
   config:
     required: true
+- type: text
+  name: author
+  label: Preacher
+  description: 'For example: Paul Geerling'
 - type: datetime
-  default: Invalid date
+  default: "/uploads/2017/12/01/17-11-2017 _ Bne West _ Sunjay Stevenson-2.m4a"
   label: Date
   name: date
   description: The date recorded (Usually a Sunday)
   config:
     date_format: DD/MM/YYYY
     required: true
-- type: file
-  label: Audio File
-  name: podcast_file
-  description: Upload the recorded audio file here as an mp4
-  config:
-    maxSize: '500'
 - type: list
   name: campuses
   label: Campuses
@@ -35,6 +33,12 @@ fields:
   default:
   - Launceston
   - Brisbane North
+- type: file
+  label: Audio File
+  name: podcast_file
+  description: Upload the recorded audio file here as an mp4
+  config:
+    maxSize: '500'
 - type: textarea
   name: Description
   label: Description
