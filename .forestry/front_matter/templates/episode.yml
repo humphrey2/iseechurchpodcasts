@@ -9,3 +9,9 @@ fields:
   config:
     date_format: DD/MM/YYYY
     required: true
+- type: file
+  label: Audio File
+  name: podcast_file
+  description: Upload the recorded audio file here as an mp4
+  config:
+    maxSize: '500'
