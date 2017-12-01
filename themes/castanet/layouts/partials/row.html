@@ -54,11 +54,13 @@
           <small>Posted on {{ dateFormat "Monday, Jan 2, 2006" .Date }}</small>
         </div>
       </div>
+      {{- if .Params.episode_banner -}}
       <div class = "row homepage_episode_row">
         <div class = "col">
           <img src="{{ .Params.episode_banner | absURL }}" class="img-fluid episode_image"/>
         </div>
       </div>
+      {{- end -}}
       <div class = "row homepage_episode_row">
         <div class = "col">
           {{ .Description | markdownify | truncate ($.Scratch.Get "truncate") " "}}&nbsp;<small><a href = "{{ .Permalink }}">Read More</a></small>
