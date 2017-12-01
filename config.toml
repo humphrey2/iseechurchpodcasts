@@ -50,6 +50,7 @@ disqusShortname = "arresteddevops"
 #    parent = "resources"
 
 [params]
+campuses = ["Adelaide", "Brisbane City", "Brisbane North", "Brisbane East", "Launceston", "Mumbai"]
 site_theme = "blue"
 site_layout = "row"
 enable_jumbo = "true"
