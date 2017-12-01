@@ -1,7 +1,7 @@
 ---
 title: Back to School 2
-date: 2017-11-25T09:05:22.104Z
-author: Person
+date: 2017-11-23T20:05:22+11:00
+author: Personfdsafsdfsffdsdf
 podcast_file: /media/20171101_195116.jpg
 Description: >-
   Bootstrapping alpha seed money scrum project. Business model canvas low
@@ -19,4 +19,4 @@ Description: >-
   Disruptive sales founders paradigm shift stock growth hacking graphical user
   interface customer iPhone channels funding.
 ---
-
+sadfasdfasdf
