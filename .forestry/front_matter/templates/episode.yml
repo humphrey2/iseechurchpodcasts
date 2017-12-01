@@ -15,3 +15,12 @@ fields:
   description: Upload the recorded audio file here as an mp4
   config:
     maxSize: '500'
+- type: list
+  name: campuses
+  label: Campuses
+  description: Select which Podcast feeds this should appear in
+  config:
+    use_select: true
+    source:
+      type: simple
+      file: guests-gbluth-yml
