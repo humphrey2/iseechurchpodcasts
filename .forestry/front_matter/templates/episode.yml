@@ -1,3 +1,11 @@
 ---
-hide_body: false
-fields: []
+hide_body: true
+fields:
+- type: datetime
+  default: Invalid date
+  label: Date
+  name: date
+  description: The date recorded (Usually a Sunday)
+  config:
+    date_format: DD/MM/YYYY
+    required: true
