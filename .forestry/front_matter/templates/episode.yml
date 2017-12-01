@@ -1,6 +1,13 @@
 ---
 hide_body: true
 fields:
+- type: text
+  default: ''
+  label: Sermon Title
+  name: title
+  description: Short and sweet is best
+  config:
+    required: true
 - type: datetime
   default: Invalid date
   label: Date
