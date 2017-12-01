@@ -35,3 +35,7 @@ fields:
   default:
   - Launceston
   - Brisbane North
+- type: textarea
+  name: Description
+  label: Description
+  description: An optional paragraph that summaries the sermon
