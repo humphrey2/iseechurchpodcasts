@@ -1,11 +1,2 @@
-{{ if isset $.Site.Params "site_theme"}}
-<link href="{{ printf "css/%s.css" $.Site.Params.site_theme | absURL}}" rel="stylesheet">
-{{ else }}
-<link href={{"css/orange.css" | absURL }} rel="stylesheet">
-{{ end }}
-<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
-<!-- Custom CSS -->
-{{ range .Site.Params.custom_css }}
-    <link rel="stylesheet" href="{{ . | absURL }}">
-{{ end }}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

@@ -1,12 +1,25 @@
 {{ define "main" }}
 
-{{ if isset $.Site.Params "site_layout" }}
-  {{ if eq $.Site.Params.site_layout "grid" }}
-    {{- partial "grid.html" . }}
-  {{ else }}
-    {{- partial "row.html" . }}
-  {{ end }}
-{{ else }}
-  {{- partial "row.html" . }}
-{{ end }}
+<h1 class="display-4">All Campuses</h1>
+
+<p>
+    <a href="index.xml" class="btn btn-light">iTunes RSS Feed</a>
+</p>
+
+<table class="table">
+    <thead class="thead-light">
+      <th>Title</th>
+      <th>Speaker</th>
+      <th>Date</th>
+    </thead>
+    <tbody>
+      {{ range $page := .Pages }}
+        <tr>
+          <th>{{ .Title }}</th>
+          <td>{{ .Params.author }}</td>
+          <td>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</td>
+        </tr>
+      {{ end }}
+    </tbody>
+</table>
 {{ end }}
