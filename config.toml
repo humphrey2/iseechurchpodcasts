@@ -54,6 +54,7 @@ campuses = ["Adelaide", "Brisbane City", "Brisbane North", "Brisbane East", "Lau
 site_theme = "blue"
 site_layout = "row"
 enable_jumbo = "true"
+feed_explicit = "no"
 # truncate = "100"
 # about_logo = "/img/hugocast.png"
 copyright_notice = "Copyright 2016 [Example](https://example.com)"

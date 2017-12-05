@@ -25,6 +25,7 @@
     <itunes:email>{{ .Site.Params.feed.itunes_owner_email }}</itunes:email>
     </itunes:owner>
     <itunes:image href="{{ .Site.Params.feed.itunes_image }}" />
+    {{ if isset .Site.Params "feed_explicit" }}<itunes:explicit>{{ .Site.Params.feed_explicit }}</itunes:explicit>{{ end }}
     <itunes:category text="{{ .Site.Params.feed.itunes_top_category }}">
       {{ with .Site.Params.feed.itunes_first_sub_category -}}
       <itunes:category text="{{ . }}" />
