@@ -1,9 +1,9 @@
 +++
-Description = ""
+Description = "asdfasdf"
 PublishDate = "2017-12-02T03:16:56+11:00"
 aliases = ["/##"]
 author = "##"
-campuses = []
+campuses = ["Launceston"]
 date = "2017-12-02T03:16:56+11:00"
 episode = ""
 episode_image = "img/episode/default.jpg"
