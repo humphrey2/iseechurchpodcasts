@@ -40,8 +40,8 @@
           <itunes:author> {{ .Site.Params.itunes_author }}</itunes:author>
           <itunes:summary><![CDATA[{{ .Description | markdownify }}]></itunes:summary>
           <description><![CDATA[{{ .Description | markdownify }}]></description>
-          <enclosure url="{{ .Site.BaseURL }}{{ .Params.podcast_file }}" {{with .Params.podcast_bytes}}length="{{ . }}"{{ end }} type="audio/mpeg" />
-          <guid>{{ .Site.BaseURL }}{{ .Params.podcast_file }}</guid>
+          <enclosure url="{{ .Params.podcast_file | absURL }}" {{with .Params.podcast_bytes}}length="{{ . }}"{{ end }} type="audio/mpeg" />
+          <guid>{{ .Params.podcast_file | absURL }}</guid>
           <link>{{ .Permalink }}</link>
           <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }} </pubDate>
           {{- with .Params.podcast_duration -}}
