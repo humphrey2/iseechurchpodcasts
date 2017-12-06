@@ -15,7 +15,7 @@
     <tbody>
       {{ range $page := .Pages }}
         <tr>
-          <th>{{ .Title }}</th>
+          <th><a href="{{ .Permalink }}">{{ .Title }}</a></th>
           <td>{{ .Params.author }}</td>
           <td>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</td>
         </tr>
