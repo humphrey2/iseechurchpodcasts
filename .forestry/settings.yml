@@ -6,11 +6,5 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections:
-  guest:
-    default_front_matter_template: guest
-  episode:
-    default_front_matter_template: episode
-  about:
-    default_front_matter_template: about
+sections: 
 version: 0.30.2
