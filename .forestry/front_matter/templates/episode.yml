@@ -1,4 +1,6 @@
 ---
+pages:
+- sermon/this-is-a-test.md
 hide_body: true
 fields:
 - type: text
