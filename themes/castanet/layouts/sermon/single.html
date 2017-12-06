@@ -1,0 +1,126 @@
+{{ define "main" }}
+
+  <div class="row">
+    <div class="col">
+      <h1 class="display-3">{{ title .Title }} </h1>
+      <p class="lead">{{ .Params.campuses }} Campus</p>
+      <ul class="lead">
+        {{ range $index, $campus := .Params.campuses }} 
+          <li><a href="{{ "campuses" | urlize | relURL }}/{{ $campus | urlize }}/">{{ $campus }} Campus</a> </li>
+        {{ end }}
+      </ul>
+
+      <p class="small">Posted on {{ dateFormat "Monday, Jan 2, 2006" .Date }}</p>
+      
+    </div>
+  </div>
+
+  <nav>
+    <ul class="pagination">
+      {{ if .PrevInSection }}
+        <li class="page-item">
+          <a href="{{.PrevInSection.Permalink}}" class="page-link">
+            <span aria-hidden="true">&larr;</span>
+            Previous</a>
+        </li>
+        {{ else }}
+        <li class="page-item disabled">
+          <a href="#" class="page-link">
+            <span aria-hidden="true">&larr;</span>
+            Previous</a>
+        </li>
+      {{ end }}
+      {{ if .NextInSection }}
+        <li class="page-item">
+          <a href="{{.NextInSection.Permalink}}" class="page-link">Next
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+        {{ else }}
+        <li class="page-item disabled">
+          <a href="#" class="page-link">Next
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+
+  {{ if isset .Params "episode_banner" }}
+    {{ if ne .Params.episode_banner "" }}
+      <div class = "row">
+      <div class = "col">
+        <img src="{{ .Params.episode_banner | absURL }}" class="img-fluid episode_image"/>
+      </div>
+      </div>
+      <div class = "row">
+      <div class = "col">
+        {{ .Description | markdownify }}
+      </div>
+      </div>
+    {{ end }}
+  {{ else }}
+    <!-- begin square row -->
+    {{- if isset .Params "episode_image" -}}
+      {{- if ne .Params.episode_image "" -}}
+        <div class="row">
+          <div class="col-md-3">
+            <img src="{{ .Params.episode_image | absURL }}" class="img-fluid episode_image"/>
+          </div>
+          <div class="col-md-8">
+            {{ .Description | markdownify }}
+          </div>
+        </div>
+      {{- end -}}
+      {{- else -}}
+      <div class="row">
+        <div class="col">
+          {{ .Description | markdownify }}
+        </div>
+      </div>
+      {{- end -}}
+
+    <!-- end square row -->
+    {{ end }}
+    {{- with .Params.podcast_file -}}
+      <div class="row">
+        <div class="col-md-12 player_row">
+          <audio src="{{ $.Site.Params.media_prefix }}{{ . }}" preload="metadata" controls style="display: block; width: 100%;"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+          <a href="{{ $.Site.Params.media_prefix }}{{ . }}">Direct Download</a>
+        </div>
+      </div>
+    {{- end -}}
+
+
+  <div class="row">
+    <div class="col">
+      <h2>Show Notes</h2>
+      {{ .Content }}
+    </div>
+  </div>
+
+
+
+
+<!-- end sponsor section -->
+      <div class="row">
+        <!-- sharing begins -->
+        <div class="col-md-12">
+          <div id="share"></div>
+        </div>
+      </div>
+      <!-- sharing ends -->
+      <div class="row">
+      </div>
+      <!-- disqus ends -->
+      <div class="row">
+        <!-- pager begin -->
+        <div class="col-md-12">
+        </div>
+      </div>
+      <!-- pager end -->
+    {{ end }}
